@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html class="page" lang="ru">
+
+<head>
+  <meta charset="UTF-8">
+  <!-- <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no"> -->
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <link rel="shortcut icon" href="#" type="image/x-icon">
+  <title>Template</title>
+  <link rel="stylesheet" href="src/css/style.css">
+</head>
+
+<body class="page-body">
+
+  <div class="wrapper">
+    <svg width="120" height="120" viewBox="0 0 120 120" xmlns="http://www.w3.org/2000/svg" version="1.1"
+      xmlns:xlink="http://www.w3.org/1999/xlink">
+
+      <!-- Рисуем серый контур движения с двумя
+      маленькими кружками в ключевых точках -->
+      <path id="theMotionPath" stroke="lightgrey" stroke-width="2" fill="none"
+        d="M10,110 A120,120 -45 0,1 110 10 A120,120 -45 0,1 10,110" />
+      <circle cx="10" cy="110" r="3" fill="lightgrey" />
+      <circle cx="110" cy="10" r="3" fill="lightgrey" />
+
+      <!-- Рисуем красный круг, который будет перемещаться
+      вдоль траектории движения. -->
+      <circle cx="" cy="" r="8" fill="red">
+
+        <!-- Определяем анимацию пути движения -->
+        <animateMotion dur="6s" repeatCount="indefinite">
+          <mpath xlink:href="#theMotionPath" />
+        </animateMotion>
+      </circle>
+    </svg>
+  </div>
+
+  <script src="src/js/index.js"></script>
+</body>
+
+</html>
